@@ -8,12 +8,43 @@
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <header>
-      <div>
-  
+    <header class="w-screen">
+      <div class="m-auto flex max-w-screen-xl justify-between px-4 py-2">
+        <div class="flex items-center gap-16">
+          <h1 class="text-2xl">Oceanet</h1>
+          <nav>
+            <ul
+              class="flex items-center justify-between gap-8 *:hover:cursor-pointer *:hover:text-blue-600"
+            >
+              <li>
+                <a class="block h-full w-full" onclick="alert('clicked')"> link1 </a>
+              </li>
+              <li>
+                <a class="block h-full w-full" onclick="alert('clicked')"> link2 </a>
+              </li>
+              <li>
+                <a class="block h-full w-full" onclick="alert('clicked')"> link3 </a>
+              </li>
+              <li>
+                <a class="block h-full w-full" onclick="alert('clicked')"> link4 </a>
+              </li>
+              <li>
+                <a class="block h-full w-full" onclick="alert('clicked')"> link5 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex gap-4">
+          <form role="search" class="flex items-center flex-row-reverse gap-2">
+            <button type="button" class="size-8 bg-gray-500">search icon</button>
+            <input type="text" class="hidden" />
+          </form>
+          <a class="block p-2">Sign In</a>
+          <a class="block bg-blue-500 p-2">Get Started</a>
+        </div>
       </div>
     </header>
-    <main></main>
+    <main class="bg-black h-screen"></main>
     <footer></footer>
   </body>
 </html>

@@ -25,5 +25,5 @@ export default defineConfig([
   },
   {
     extends: ["plugin:prettier/recommended"],
-  }
+  },
 ]);
