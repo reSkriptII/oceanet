@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
-/* * { 
-  border: 1px solid navy
-} */
+@layer components {
+  .page-section-layout {
+    @apply mx-auto my-16 w-full max-w-screen-xl px-14;
+  }
+
+  .card {
+    @apply rounded-xl shadow shadow-slate-700;
+  }
+
+  .selection-button {
+    @apply rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 
+    has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none
+  }
+
+  .page-section-header-text {
+    @apply my-4 text-4xl font-semibold;
+  }
+
+  .link-text {
+    @apply text-blue-600 hover:text-blue-800 hover:underline;
+  }
+}

@@ -63,8 +63,8 @@
       </div>
     </header>
 
-    <main class="bg-red h-screen">
-      <section class="h-152 bg-[url(/hero-bg.png)] bg-cover text-cyan-50">
+    <main>
+      <section id="hero" class="h-152 bg-[url(/hero-bg.png)] bg-cover text-cyan-50">
         <div class="m-auto flex size-full max-w-screen-xl items-center justify-between px-16">
           <div class="w-1/2">
             <div class="pr-12">
@@ -90,10 +90,10 @@
         </div>
       </section>
 
-      <section class="bg">
-        <div class="mx-auto my-16 w-full max-w-screen-xl px-14">
+      <section id="overview-section" class="bg">
+        <div class="page-section-layout">
           <header class="mx-auto mb-8 w-3/5 text-center">
-            <h2 class="my-4 text-4xl font-semibold">All-in-One Cloud Platform</h2>
+            <h2 class="page-section-header-text">All-in-One Cloud Platform</h2>
             <p>
               Oceanet is a cloud service platform with out-of-box tools integration. Make working
               faster and more efficient across the network.
@@ -102,7 +102,7 @@
 
           <div class="grid grid-cols-3 gap-8 px-8 text-base">
             <section
-              class="flex size-full w-full flex-col justify-between rounded-xl p-4 shadow shadow-slate-700"
+              class="card flex flex-col justify-between p-4"
             >
               <div>
                 <header class="flex items-center gap-2">
@@ -134,10 +134,10 @@
                   service on different devices from across the world
                 </p>
               </div>
-              <a class="text-blue-600 hover:text-blue-800 hover:underline">Read more ➤</a>
+              <a class="link">Read more ➤</a>
             </section>
             <section
-              class="flex size-full w-full flex-col justify-between rounded-xl p-4 shadow shadow-slate-700"
+              class="card flex flex-col justify-between p-4"
             >
               <div>
                 <header class="flex items-center gap-2">
@@ -178,10 +178,10 @@
                   Intuitive dashboard - Manage everything out-of-the-box in a single place.
                 </p>
               </div>
-              <a class="text-blue-600 hover:text-blue-800 hover:underline">Read more ➤</a>
+              <a class="link">Read more ➤</a>
             </section>
             <section
-              class="flex size-full w-full flex-col justify-between rounded-xl p-4 shadow shadow-slate-700"
+              class="card flex flex-col justify-between p-4"
             >
               <div>
                 <header class="flex items-center gap-2">
@@ -209,17 +209,17 @@
                   Team workspace - Share assets automatically and collaboration in real time.
                 </p>
               </div>
-              <a class="text-blue-600 hover:text-blue-800 hover:underline">Read more ➤</a>
+              <a class="link">Read more ➤</a>
             </section>
           </div>
         </div>
       </section>
-      <section class="bg">
-        <div class="mx-auto my-16 w-full max-w-screen-xl px-14">
+      <section id="product-section" class="bg">
+        <div class="page-section-layout">
           <h2 class="mb-8 text-4xl font-semibold">Product</h2>
           <div class="my-8 flex gap-2">
             <label
-              class="relative rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none"
+              class="relative selection-button"
             >
               Featured
               <input
@@ -227,11 +227,11 @@
                 name="product-select"
                 value="featured"
                 class="absolute inset-0 size-0"
-                selected
+                checked
               />
             </label>
             <label
-              class="relative rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none"
+              class="relative selection-button"
             >
               File Storage
               <input
@@ -242,7 +242,7 @@
               />
             </label>
             <label
-              class="relative rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none"
+              class="relative selection-button"
             >
               Hosting
               <input
@@ -253,7 +253,7 @@
               />
             </label>
             <label
-              class="relative rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none"
+              class="relative rounded-full selection-button"
             >
               Analytics
               <input
@@ -266,11 +266,12 @@
           </div>
           <div class="relative grid h-160 w-full grid-cols-3 grid-rows-2 gap-4">
             <section
-              class="row-span-2 size-full rounded-xl p-4 shadow shadow-slate-700 hover:h-auto"
-            ></section>
+              class="card row-span-2 size-fulln"
+            >
+            </section>
             <div class="relative">
               <section
-                class="group size-full rounded-xl border border-slate-300 bg-neutral-50 p-4 pb-0 shadow shadow-slate-700 hover:absolute hover:h-auto"
+                class="card group size-full bg-neutral-50 p-4 pb-0 hover:absolute hover:h-auto"
               >
                 <div
                   class="relative h-[calc(100%-var(--spacing)*8)] overflow-hidden group-hover:overflow-y-visible"
