@@ -7,17 +7,35 @@
     <title>Vite + TS</title>
     <script type="module" src="/src/main.ts"></script>
   </head>
-  <body>
-    <header class="w-screen">
-      <div class="m-auto flex max-w-screen-xl justify-between px-4 py-2">
+  <body class="font-[Helvetica]">
+    <header class="w-full">
+      <div class="m-auto flex max-w-screen-xl justify-between px-16 py-2">
         <div class="flex items-center gap-16">
-          <h1 class="text-2xl">Oceanet</h1>
+          <div class="flex items-center justify-start gap-2">
+            <svg
+              class="size-8 fill-blue-700"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.1778 9C26.1778 9.5 18.6259 24.0221 10.6778 23C2.72978 21.9779 6.41879 17.9327 10.6778 15.5C8.59612 20.5141 6.84516 21.0242 12.1778 20.5C17.5105 19.9758 19.1778 15 19.1778 13C19.1778 11 16.6778 10.5 14.1778 9.5C15.0399 9.13185 15.7332 9.04259 17.1778 9Z"
+                stroke="current-color"
+              />
+              <path
+                d="M5.5 2.27393C3 6.27393 2.00892 8.62579 1 12.7739C7.5 6.77394 13.5 6.27393 21 7.27393C18.9145 5.4177 12 2.77394 5.5 6.77394C5.38117 4.79374 8 -1.72608 5.5 2.27393Z"
+                stroke="current-color"
+              />
+            </svg>
+
+            <h1 class="font-[ubuntu] text-2xl">Oceanet</h1>
+          </div>
+
           <nav>
             <ul
               class="flex items-center justify-between gap-8 *:hover:cursor-pointer *:hover:text-blue-600"
             >
               <li>
-                <a class="block h-full w-full" onclick="alert('clicked')"> link1 </a>
+                <a class="block h-full w-full font-[Ubuntu]" onclick="alert('clicked')"> link1 </a>
               </li>
               <li>
                 <a class="block h-full w-full" onclick="alert('clicked')"> link2 </a>
@@ -35,16 +53,75 @@
           </nav>
         </div>
         <div class="flex gap-4">
-          <form role="search" class="flex items-center flex-row-reverse gap-2">
+          <form role="search" class="flex flex-row-reverse items-center gap-2">
             <button type="button" class="size-8 bg-gray-500">search icon</button>
-            <input type="text" class="hidden" />
+            <input type="text" hidden />
           </form>
           <a class="block p-2">Sign In</a>
           <a class="block bg-blue-500 p-2">Get Started</a>
         </div>
       </div>
     </header>
-    <main class="bg-black h-screen"></main>
+
+    <main class="bg-red h-screen">
+      <article class="h-152 bg-[url(/hero-bg.png)] bg-cover text-cyan-50">
+        <div class="m-auto flex size-full max-w-screen-xl items-center justify-between px-16">
+          <div class="w-1/2">
+            <div class="pr-16">
+              <h2 class="my-4 text-5xl leading-relaxed font-bold">Title</h2>
+              <p class="my-4">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, corporis
+                exercitationem? Velit eaque minima perferendis non laborum quasi autem aspernatur.
+              </p>
+            </div>
+
+            <div class="flex gap-2 py-4 align-middle text-lg">
+              <a
+                class="block rounded-l-full bg-linear-120 from-[#0ff] to-[#0af] px-8 py-2.5 font-semibold text-black"
+                >Create a new account</a
+              >
+              <a
+                class="block rounded-r-full border-1 border-blue-500 px-6 py-[calc(var(--spacing)*2.5-1px)]"
+                >Explore Oceanet</a
+              >
+            </div>
+          </div>
+          <div class="w-1/2">image</div>
+        </div>
+      </article>
+      <article>
+        <div class=""></div>
+        <h2 class="my-4 text-4xl font-semibold">All-in-One Cloud Platform</h2>
+        <p>
+          Oceanet is a crloud service platform with out-of-box tools integration. Make the work
+          faster and more efficient across the network.
+        </p>
+        <section>
+          <div>
+            <h3>Connection</h3>
+            <p>
+              Storage, hosting, and analytics.<br />
+              Unified in one cloud platform.
+            </p>
+          </div>
+          <div>
+            <h3>Simplicity</h3>
+            <p>
+              Intuitive dashboard.<br />
+              Manage everything out-of-the-box in a single place.
+            </p>
+          </div>
+          <div>
+            <h3>Shared Workspace</h3>
+            <p>
+              Team workspace.<br />
+              Share assets automatically and collaboration in real time.
+            </p>
+          </div>
+        </section>
+      </article>
+      <article></article>
+    </main>
     <footer></footer>
   </body>
 </html>
