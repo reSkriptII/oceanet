@@ -66,10 +66,10 @@
             </button>
             <input type="text" hidden />
           </form>
-          <a class="block p-2 text-lg hover:text-blue-500" href="coming-soon">Sign In</a>
+          <a class="block p-2 text-lg hover:text-blue-500" href="/coming-soon">Sign In</a>
           <a
-            class="block rounded-md bg-blue-500 p-2 text-lg text-yellow-50 shadow shadow-slate-200 hover:bg-blue-600"
-            href="coming-soon"
+            class="block rounded-md bg-blue-500 p-2 text-lg text-yellow-50 shadow shadow-slate-200 hover:bg-blue-700"
+            href="/coming-soon"
             >Get Started</a
           >
         </div>
@@ -81,19 +81,29 @@
         <div class="m-auto flex size-full max-w-screen-xl items-center justify-between px-16">
           <div class="w-5/9">
             <div class="pr-14">
-              <h2 class="my-4 text-5xl font-bold leading-tight">We make cloud computing simple.</h2>
+              <h2 class="my-4 text-5xl leading-tight font-bold">We make cloud computing simple.</h2>
               <p class="my-4">
-                Manage your data and web applications in a single platform with interconnected services.
+                Manage your data and web applications in a single platform with interconnected
+                services.
               </p>
             </div>
 
             <div class="flex gap-2 py-4 align-middle text-lg">
               <a
-                class="block rounded-l-full bg-linear-120 from-[#0ff] to-[#0af] px-8 py-2.5 font-semibold text-black hover:underline" tabindex="0"
-                >Create a new account</a
+                class="group relative block overflow-hidden rounded-l-full bg-linear-120 from-[#0ff] to-[#0af] px-8 py-2.5 font-semibold text-black hover:underline hover:outline focus:outline outline-white"
+                href="/coming-soon"
               >
+                <span>Create a new account</span>
+                <span
+                  class="group-hover:animate-sweep pointer-events-none absolute top-0 z-20 size-full transform overflow-hidden bg-gradient-to-r from-20% via-white/50 to-transparent to-60% opacity-0"
+                  aria-hidden="true"
+                >
+                </span>
+              </a>
+
               <a
-                class="block rounded-r-full border-1 border-blue-500 px-6 py-[calc(var(--spacing)*2.5-1px)] hover:underline hover:bg-slate-900" tabindex="0"
+                class="block rounded-r-full border-1 border-blue-500 px-6 py-[calc(var(--spacing)*2.5-1px)] hover:bg-white/10 hover:underline"
+                href="/coming-soon"
                 >Explore Oceanet</a
               >
             </div>
@@ -144,7 +154,7 @@
                   service on different devices from across the world
                 </p>
               </div>
-              <a class="link-text">Read more ➤</a>
+              <a class="text-blue-500 hover:text-blue-800 hover:underline">Read more ➤</a>
             </section>
             <section class="card flex flex-col justify-between p-4">
               <div>
@@ -186,7 +196,7 @@
                   Intuitive dashboard - Manage everything out-of-the-box in a single place.
                 </p>
               </div>
-              <a class="link-text">Read more ➤</a>
+              <a class="text-blue-500 hover:text-blue-800 hover:underline">Read more ➤</a>
             </section>
             <section class="card flex flex-col justify-between p-4">
               <div>
@@ -215,7 +225,7 @@
                   Team workspace - Share assets automatically and collaboration in real time.
                 </p>
               </div>
-              <a class="link-text">Read more ➤</a>
+              <a class="text-blue-500 hover:text-blue-800 hover:underline">Read more ➤</a>
             </section>
           </div>
         </div>

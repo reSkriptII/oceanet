@@ -10,10 +10,22 @@
   }
 
   .selection-button {
-    @apply rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 hover:not-[:has-checked]:bg-blue-200 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none;
+    @apply rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 hover:not-[:has-checked]:bg-blue-200 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none has-focus:outline outline-offset-1 outline-slate-500;
   }
 
-  .link-text {
-    @apply text-blue-600 hover:text-blue-800 hover:underline;
+}
+
+@theme {
+  --animate-sweep: sweep 0.7s ease-in-out;
+  @keyframes sweep {
+    0% {
+      left: -100%;
+      opacity: 100%;
+    }
+
+    100% {
+      left: 100%;
+      opacity: 100%;
+    }
   }
 }
