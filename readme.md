@@ -31,7 +31,7 @@ By the end, it will be able to:
   - [x] landing page design
     - [x] general Interactivity
     - [_] interactive component (using react)
-    - [_] mobile responsive
+    - [x] mobile responsive
     - [_] dark mode support
   - [_] subpage
     - auth page

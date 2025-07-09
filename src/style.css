@@ -2,7 +2,7 @@
 
 @layer components {
   .page-section-layout {
-    @apply mx-auto my-8 md:my-16 w-full max-w-screen-xl px-4 md:px-14;
+    @apply mx-auto my-8 w-full max-w-screen-xl px-4 md:my-16 md:px-14;
   }
 
   .section-flex {
@@ -18,7 +18,15 @@
   }
 
   .selection-button {
-    @apply rounded-full bg-slate-200 px-6 py-2 shadow shadow-slate-400 outline-offset-1 outline-slate-500 hover:not-[:has-checked]:bg-blue-200 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none has-focus:outline;
+    @apply rounded-full bg-slate-200 px-4 py-2 shadow shadow-slate-400 outline-offset-1 outline-slate-500 hover:not-[:has-checked]:bg-blue-200 has-checked:bg-slate-600 has-checked:text-white has-checked:shadow-none has-focus:outline md:px-6;
+  }
+
+  .section-header-text {
+    @apply mx-auto my-4 text-3xl font-semibold md:text-4xl lg:mb-8;
+  }
+
+  .svg-subheader {
+    @apply size-6 fill-blue-500 stroke-blue-500 md:size-8;
   }
 }
 
