@@ -9,8 +9,8 @@
   </head>
   <body class="font-[Helvetica]">
     <header class="sticky top-0 z-100 w-full bg-white shadow shadow-slate-200">
-      <div class="m-auto flex max-w-screen-xl justify-between px-16 py-2">
-        <div class="flex items-center gap-16">
+      <div class="m-auto flex max-w-screen-xl justify-between px-4 py-2 lg:px-16">
+        <div class="flex items-center gap-4 lg:gap-12">
           <div class="flex items-center justify-start gap-2">
             <svg
               class="size-8 fill-blue-700"
@@ -28,9 +28,9 @@
             </svg>
             <h1 class="font-[ubuntu] text-2xl">Oceanet</h1>
           </div>
-          <nav>
+          <nav class="hidden md:block">
             <ul
-              class="flex items-center justify-between gap-8 *:hover:cursor-pointer *:hover:text-blue-600"
+              class="flex items-center justify-between gap-2 lg:gap-8 *:hover:cursor-pointer *:hover:text-blue-600"
             >
               <li>
                 <a class="block h-full w-full" href="/coming-soon"> Explore </a>
@@ -50,7 +50,7 @@
             </ul>
           </nav>
         </div>
-        <div class="flex gap-4">
+        <div class="hidden gap-2 md:flex">
           <form role="search" class="flex flex-row-reverse items-center gap-2">
             <button
               type="button"
@@ -73,15 +73,29 @@
             >Get Started</a
           >
         </div>
+        <button class="block md:hidden" onclick="alert('click')">
+          <svg
+            class="size-8 fill-black"
+            viewBox="0 0 45 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="45" height="10" fill="black" />
+            <rect y="15" width="45" height="10" fill="black" />
+            <rect y="30" width="45" height="10" fill="black" />
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
-      <section id="hero" class="h-152 bg-[url(/hero-bg.webp)] bg-cover text-cyan-50">
-        <div class="m-auto flex size-full max-w-screen-xl items-center justify-between px-16">
-          <div class="w-11/18">
-            <div class="pr-14">
-              <h2 class="my-4 text-5xl leading-tight font-bold">
+      <section id="hero" class="h-162 bg-[url(/hero-bg.webp)] bg-cover text-cyan-50 md:h-152">
+        <div
+          class="m-auto flex size-full max-w-screen-xl flex-col-reverse items-center justify-between p-4 md:flex-row md:py-0 md:px-6 lg:px-16"
+        >
+          <div class="w-full md:w-11/18">
+            <div class="lg:pr-14">
+              <h2 class="my-4 text-4xl leading-tight font-bold lg:text-5xl">
                 Workspace for code, files, and cloud app. One place - full stack
               </h2>
               <p class="my-4">
@@ -90,37 +104,37 @@
               </p>
             </div>
 
-            <div class="flex gap-2 py-4 align-middle text-lg">
+            <div class="section-flex gap-2 py-4 text-lg">
               <a
-                class="group relative block overflow-hidden rounded-l-full bg-linear-120 from-[#0ff] to-[#0af] px-8 py-2.5 font-semibold text-black outline-white hover:underline hover:outline focus:outline"
+                class="hero-button group relative overflow-hidden bg-linear-120 from-[#0ff] to-[#0af] px-6 py-2.5 font-semibold text-black outline-white hover:outline focus:outline md:rounded-r-none"
                 href="/coming-soon"
               >
                 <span>Create a new account</span>
                 <span
-                  class="group-hover:animate-sweep pointer-events-none absolute top-0 z-20 size-full transform overflow-hidden bg-gradient-to-r from-20% via-white/50 to-transparent to-60% opacity-0"
+                  class="group-hover:animate-sweep pointer-events-none absolute top-0 z-20 hidden size-full transform overflow-hidden bg-gradient-to-r from-20% via-white/50 to-transparent to-60% opacity-0 md:block"
                   aria-hidden="true"
                 >
                 </span>
               </a>
 
               <a
-                class="block rounded-r-full border-1 border-blue-500 px-6 py-[calc(var(--spacing)*2.5-1px)] hover:bg-white/10 hover:underline"
+                class="hero-button border-1 border-blue-500 px-6 py-[calc(var(--spacing)*2.5-1px)] hover:bg-white/10 md:rounded-l-none"
                 href="/coming-soon"
                 >Explore Oceanet</a
               >
             </div>
           </div>
           <div
-            class="h-full w-7/18 bg-[url(/hero-img.webp)] bg-contain bg-center bg-no-repeat"
+            class="h-full w-full bg-[url(/hero-img.webp)] bg-contain bg-center bg-no-repeat md:w-7/18"
           ></div>
         </div>
       </section>
 
       <section id="overview-section" class="bg">
         <div class="page-section-layout">
-          <header class="mx-auto mb-8 w-3/5 text-center">
-            <h2 class="my-4 text-4xl font-semibold">All-in-One Cloud Platform</h2>
-            <p>
+          <header class=" text-center">
+            <h2 class="my-4 text-4xl font-semibold mx-auto mb-8 md:w-3/5">All-in-One Cloud Platform</h2>
+            <p class="mx-auto mb-8 lg:w-3/5">
               Oceanet is a cloud service platform with out-of-box tools integration. Make working
               faster and more efficient across the network.
             </p>
@@ -240,6 +254,7 @@
           </div>
         </div>
       </section>
+
       <section id="product-section" class="bg">
         <div class="page-section-layout">
           <h2 class="mb-8 text-4xl font-semibold">Product</h2>
@@ -350,6 +365,7 @@
           </div>
         </div>
       </section>
+
       <section class="bg-[url(/section-bg1.webp)] bg-cover text-cyan-50">
         <div class="page-section-layout py-16">
           <article class="w-4/5">
