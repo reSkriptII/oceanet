@@ -27,16 +27,16 @@ By the end, it will be able to:
 
 ## Feature
 
-- [_] design
+- [ ] design
   - [x] landing page design
     - [x] general Interactivity
-    - [_] interactive component (using react)
+    - [ ] interactive component (using react)
     - [x] mobile responsive
-    - [_] dark mode support
-  - [_] subpage
+    - [ ] dark mode support
+  - [ ] subpage
     - auth page
     - dashboard
-- [_] functionality
+- [ ] functionality
   - backend content fetching
   - accont system
   - file storage

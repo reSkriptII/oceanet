@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/oceanet.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oceanet</title>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </head>
   <body class="font-[Helvetica]">
     <header class="sticky top-0 z-100 w-full bg-white shadow shadow-slate-200">
@@ -87,7 +87,6 @@
         </button>
       </div>
     </header>
-
     <main>
       <section id="hero" class="h-162 bg-[url(/hero-bg.webp)] bg-cover text-cyan-50 md:h-152">
         <div
@@ -99,7 +98,7 @@
                 Workspace for code, files, and cloud app. One place - full stack
               </h2>
               <p class="my-4">
-                Store files, deploy web applications, sync and moniter them from one central
+                Store files, deploy web applications, sync and monitor them from one central
                 workspace. Build and launch without juggling tool.
               </p>
             </div>
@@ -258,6 +257,7 @@
       <section id="product-section" class="bg">
         <div class="page-section-layout">
           <h2 class="section-header-text">Product</h2>
+          <div id="filterable-product-cards"></div>
           <div class="my-4 flex flex-wrap gap-2 lg:my-8">
             <label class="selection-button relative">
               Featured
