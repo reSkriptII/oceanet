@@ -1,4 +1,14 @@
-let sql = {
+type productPieceData_t = {
+  title: string;
+  subtitle: string;
+  tags: string[];
+  description: string;
+  features: string[];
+  link: string;
+  icon: string;
+}
+
+let sql: productPieceData_t = {
   title: "Oceanet SQL",
   subtitle: "Relational Database Hosting",
   tags: ["storage", "hosting", "database", "SQL"],
@@ -8,10 +18,11 @@ let sql = {
     "Daily auto backup",
     "Connect via SSL from backend apps",
   ],
-  link: "/coming-soon.html"
+  link: "/coming-soon.html",
+  icon: "sql",
 };
 
-let kv = {
+let kv: productPieceData_t = {
   title: "Oceanet KV",
   subtitle: "key-value store",
   tags: ["hosting", "database", "Redis"],
@@ -21,10 +32,11 @@ let kv = {
     "Auto-scaling clisters",
     "publish/subscript support with TTL",
   ],
-  link: "/coming-soon.html"
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let graph = {
+let graph: productPieceData_t = {
   title: "Oceanet Graph",
   subtitle: "Graph database",
   tags: ["hosting", "database", "GraphDB"],
@@ -34,10 +46,11 @@ let graph = {
     "Visualize nodes and edges",
     "REST and Cypher API",
   ],
-  link: "/coming-soon.html"
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let nosql = {
+let nosql: productPieceData_t = {
   title: "Oceanet Doc",
   subtitle: "document/noSQL database",
   tags: ["storage", "hosting", "database", "noSQL", "JSON"],
@@ -47,10 +60,11 @@ let nosql = {
     "Rich query filters",
     "Scales horizontally",
   ],
-  link: "/coming-soon.html"
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let statichost = {
+let statichost: productPieceData_t = {
   title: "Oceanet Pageview",
   subtitle: "static site hosting",
   tags: ["hosting", "Static-hosting", "CDN"],
@@ -59,10 +73,11 @@ let statichost = {
     "Git integration",
     "Automatic HTTPS",
   ],
-  link: "/coming-soon.html"
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let backendhost = {
+let backendhost: productPieceData_t = {
   title: "Oceanet Server",
   subtitle: "key-value store",
   tags: ["hosting", "serverless", "API"],
@@ -71,92 +86,110 @@ let backendhost = {
     "Intergrate logging and analytics",
     "Automatic security enforcement",
   ],
-  link: "/coming-soon.html"
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let fullstack = {
+let fullstack: productPieceData_t= {
   title: "Oceanet Fullstack",
   subtitle: "SSR + API hybrid hosting",
   tags: ["hosting", "SSR", "NextJS"],
   description: "Deploy full stack app with Server-Side Rendering, APIs, and static assets in one place.",
-  feature: [
+  features: [
     "Framework awareness (Next.js, SvelteKit)",
     "Custom domains & routing",
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let trafficAnalytics = {
+let trafficAnalytics: productPieceData_t = {
   title: "Oceanet Pulse",
   subtitle: "Real-time traffic analytics",
   tags: ["analytics", "traffic", "live-data"],
   description: "Monitor visits, user behavior, and location in realstime.",
-  feature: [
+  features: [
     "Live pageview & session",
     "Device & Browser breakdown"
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let funnel = {
+let funnel: productPieceData_t = {
   title: "Oceanet Funnel",
   subtitle: "User journey and conversion tracking",
   tags: ["analytics", "Funnel", "UX"],
   description: "Visualize users move. Identify drop-off points and optimize conversion paths.",
-  feature: [
+  features: [
     "Custom funnel builder",
     "Custom Geal and event taggings",
     "Conversion rate insight"
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let abtest = {
+let abtest: productPieceData_t = {
   title: "Oceanet Lab",
   subtitle: "A/B and multivariate testing",
   tags: ["Analytics" ,"ABtest", "Experiments"],
   description: "Run controlled experiment to compare UI. features ,or flows. Back decisions with real user behavior data.",
-  feature: [
+  features: [
     "Audience segmentation",
     "Auto split and rollout",
     "Statistical significant calculator"
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let vault = {
+let vault: productPieceData_t = {
   title: "Oceanet Vault",
   subtitle: "Secure general-purpose file storage",
   tags: ["storage", "access-control"],
   description: "Upload, store, and access files with role based sharing and automatic versioning. Designed for teams and apps.",
-  feature: [
+  features: [
     "Unlimited file types",
     "Access tokens with expiry",
     "File version history"
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let bucket = {
+let bucket: productPieceData_t = {
   title: "Oceanet Bucket",
   subtitle: "Public & private asset hosting",
   tags: ["storage", "hosting", "CDN"],
   description: "Store static files for fast delivery across the network.",
-  feature: [
+  features: [
     "Custom domain mapping",
     "CORS control",
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
-let stream = {
+let stream: productPieceData_t = {
   title: "Oceanet Stream",
   subtitle: "Event and analytics data pipeline",
   tags: ["storage", "analytics", "EventStream"],
   description: "Capture user actions, telemetry, and system events in real time for further processing or export.",
-  feature: [
+  features: [
     "Real-time ingestino API",
     "Auto-indexing for queries",
     "Retention policy & export tools"
-  ]
+  ],
+  link: "/coming-soon.html",
+  icon: "",
 };
 
+
+
+
 // simulate backend API data
-export const productdata = {
+export const productsdata = {
   featured: [vault, statichost, sql, trafficAnalytics],
   storage: [vault, bucket, sql, stream],
   hosting: [statichost, backendhost, sql, fullstack],
