@@ -1,28 +1,38 @@
+import { useState } from "react";
+
 import { Icon } from "./icon";
 import { productsdata } from "./productdata";
 
 const productCategories = ["featured", "storage", "database", "hosting", "analytics"] as const;
 
 export function FilterableProductCards() {
+  let [selection, setSelection] = useState<typeof productCategories[number]>("featured");
+
   return (
     <>
-      <SelectorBar />
-      <CardsGrid productCategory="featured" />
+      <SelectorBar selection={selection} onChange={setSelection} />
+      <CardsGrid productCategory={selection} />
     </>
   )
 }
 
-function SelectorBar() {
+type selectionBarProps = {
+  onChange: Function;
+  selection: typeof productCategories[number];
+}
+
+function SelectorBar({ selection, onChange }: selectionBarProps) {
   
-  const filterButtons = productCategories.map((value, index) => (
+  const filterButtons = productCategories.map((value) => (
       <label className="selection-button relative">
-        {value}
+        { value[0].toUpperCase() + value.slice(1) }
         <input
           type="radio"
           name="product-select"
-          value={ value.toLowerCase() }
+          value={ value }
           className="absolute inset-0 size-0"
-          checked={ index == 0 } 
+          checked={ value === selection}
+          onChange={(e) => onChange(e.target.value)} 
         />
       </label>
     )
