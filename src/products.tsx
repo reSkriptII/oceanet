@@ -50,7 +50,7 @@ function CardsGrid({ productCategory }: productCatProps) {
   ));
 
   return (
-    <div className="h-64 w-full grid-cols-3 grid-rows-2 gap-4 lg:grid lg:h-128">
+    <div className="h-108 w-full sm:max-lg:w-2/3 m-auto grid-cols-3 grid-rows-2 gap-4 lg:grid lg:h-128">
       <ProductHero productCategory={productCategory} />
       {cards}
     </div>
@@ -58,18 +58,24 @@ function CardsGrid({ productCategory }: productCatProps) {
 }
 
 function ProductHero({ productCategory }: productCatProps) {
-  const imgScr = [
-    "/product-featured.webp", 
-    "/product-storage.webp", 
-    "/product-database.webp", 
-    "/product-hosting.webp", 
-    "/product-analytics.webp"];
-  
+  let heroData = productHeroData[productCategory];
   return (
-    <section className="card row-span-2 size-full bg-neutral-50 overflow-hidden">
-      <img className="h-3/4 w-auto" src="/hero-bg.webp" />
+    <section className="card row-span-2 size-full overflow-hidden bg-neutral-50">
+      <div
+        className="h-3/5 w-full bg-cover"
+        style={{backgroundImage: `url(${heroData.backgoundImg})`}}
+      ></div>
+      <div className="flex flex-col h-2/5 justify-between px-8 py-4 lg:py-8">
+        <h3 className="mb-4 text-center text-2xl">
+          { heroData.title }
+        </h3>
+        <p className="sm:max-lg:px-8">{ heroData.description }</p>
+        <a href={ heroData.link } className="block w-fit text-blue-500 hover:text-blue-800 hover:underline ml-auto">
+          Read more ➤
+        </a>
+      </div>
     </section>
-  )
+  );
 }
 
 type productPieceData_t = {
@@ -124,4 +130,37 @@ function ProductCard({ product }: { product: productPieceData_t }) {
       </section>
     </div>
   );
+}
+
+const productHeroData = {
+  featured: {
+    title: "Featured Product",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aperiam nobis quisquam.", 
+    backgoundImg: "/hero-bg.webp",
+    link: "/coming-soon.html"
+  },
+  storage: {
+    title: "",
+    description: "",
+    backgoundImg: "",
+    link: ""
+  },
+  database: {
+    title: "",
+    description: "",
+    backgoundImg: "",
+    link: ""
+  },
+  hosting: {
+    title: "",
+    description: "",
+    backgoundImg: "",
+    link: ""
+  },
+  analytics: {
+    title: "",
+    description: "",
+    backgoundImg: "",
+    link: ""
+  },
 }
