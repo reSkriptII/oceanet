@@ -25,14 +25,18 @@ By the end, it will be able to:
 - status: work in progress
 - version: layout only
 
+## Live Demo
+[Link to live demo](https://oceanet.vercel.app)
+
 ## Feature
 
 - [ ] design
   - [x] landing page design
     - [x] general Interactivity
-    - [ ] interactive component (using react)
+    - [x] interactive component (using react)
     - [x] mobile responsive
     - [ ] dark mode support
+    - [ ] polish animation
   - [ ] subpage
     - auth page
     - dashboard
@@ -46,12 +50,12 @@ By the end, it will be able to:
 
 - HTML
 - Tailwind CSS
-- React (soon)
+- Typescript
+- React
 - Express (planned)
 - PosgreSQL (planned)
 
 <!--
-## Live Demo
 ## How to use
 ## Setup
 ## Roadmap
