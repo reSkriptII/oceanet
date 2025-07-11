@@ -50,7 +50,7 @@ function CardsGrid({ productCategory }: productCatProps) {
   ));
 
   return (
-    <div className="h-108 w-full sm:max-lg:w-2/3 m-auto grid-cols-3 grid-rows-2 gap-4 lg:grid lg:h-128">
+    <div className="m-auto h-108 w-full grid-cols-3 grid-rows-2 gap-4 sm:max-lg:w-2/3 lg:grid lg:h-136 ">
       <ProductHero productCategory={productCategory} />
       {cards}
     </div>
@@ -63,14 +63,18 @@ function ProductHero({ productCategory }: productCatProps) {
     <section className="card row-span-2 size-full overflow-hidden bg-neutral-50">
       <div
         className="h-3/5 w-full bg-cover"
-        style={{backgroundImage: `url(${heroData.backgoundImg})`}}
+        style={{ backgroundImage: `url(${heroData.backgoundImg})` }}
       ></div>
-      <div className="flex flex-col h-2/5 justify-between px-8 py-4 lg:py-8">
-        <h3 className="mb-4 text-center text-2xl">
-          { heroData.title }
-        </h3>
-        <p className="sm:max-lg:px-8">{ heroData.description }</p>
-        <a href={ heroData.link } className="block w-fit text-blue-500 hover:text-blue-800 hover:underline ml-auto">
+      <div className="flex h-2/5 flex-col justify-between px-8 py-4 lg:py-8">
+        <div>
+          <h3 className="mb-2 text-center text-3xl font-semibold">{heroData.title}</h3>
+          <p className="sm:max-lg:px-8">{heroData.description}</p>
+        </div>
+        
+        <a
+          href={heroData.link}
+          className="ml-auto block w-fit text-blue-500 hover:text-blue-800 hover:underline"
+        >
           Read more ➤
         </a>
       </div>
@@ -135,32 +139,33 @@ function ProductCard({ product }: { product: productPieceData_t }) {
 const productHeroData = {
   featured: {
     title: "Featured Product",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aperiam nobis quisquam.", 
-    backgoundImg: "/hero-bg.webp",
-    link: "/coming-soon.html"
+    description:
+      "Explore the ecosystem of our tool. Run code, manage data, and analytics tool in one place",
+    backgoundImg: "/workspace.webp",
+    link: "/coming-soon.html",
   },
   storage: {
-    title: "",
-    description: "",
-    backgoundImg: "",
-    link: ""
+    title: "Oceanet filesystem",
+    description: "Secure, scalable file storage for teams andd apps. Seemlessly upload and share data across network.",
+    backgoundImg: "/folders.webp",
+    link: "",
   },
   database: {
-    title: "",
-    description: "",
-    backgoundImg: "",
-    link: ""
+    title: "Oceanet DB",
+    description: "Reliable managed databases. Scale without worrying about infrastructure.",
+    backgoundImg: "/server.webp",
+    link: "",
   },
   hosting: {
-    title: "",
-    description: "",
-    backgoundImg: "",
-    link: ""
+    title: "Web hosting services",
+    description: "Fast, flexible web hosting for static sites, dynamic apps, and APIs with built-in integration support.",
+    backgoundImg: "/network.webp",
+    link: "",
   },
   analytics: {
-    title: "",
-    description: "",
-    backgoundImg: "",
-    link: ""
+    title: "Integrated analytics",
+    description: "Peal-time insightswith built-in tracking and reporting. Monitor performance, user behavior, and system event.",
+    backgoundImg: "/analytics.webp",
+    link: "",
   },
-}
+};

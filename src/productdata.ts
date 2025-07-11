@@ -13,7 +13,7 @@ let sql: productPieceData_t = {
   subtitle: "Relational Database Hosting",
   tags: ["storage", "hosting", "database", "SQL"],
   description:
-    "fully managed Relational Database Service for PostgreSQL, MySQL, MariaDB, or SQL Server. Designed for transaction and analytical workload.",
+    "Fully managed Relational Database Service for PostgreSQL, MySQL, MariaDB, or SQL Server. Designed for transaction and analytical workload.",
   features: ["Pre-tuned for web apps", "Daily auto backup", "Connect via SSL from backend apps"],
   link: "/coming-soon.html",
   icon: "sql",
