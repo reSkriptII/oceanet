@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Icon } from "./icon";
+import { Icon } from "../icon";
 import { productsdata } from "./productdata";
 
 const productCategories = ["featured", "storage", "database", "hosting", "analytics"] as const;
